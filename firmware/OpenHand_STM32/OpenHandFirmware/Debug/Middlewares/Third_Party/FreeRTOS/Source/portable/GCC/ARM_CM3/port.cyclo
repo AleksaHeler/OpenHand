@@ -7,6 +7,6 @@
 ../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c:361:6:vPortEnterCritical	3
 ../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c:378:6:vPortExitCritical	3
 ../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c:389:6:PendSV_Handler	1
-../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c:426:6:SysTick_Handler	2
+../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c:426:6:xPortSysTickHandler	2
 ../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c:617:30:vPortSetupTimerInterrupt	1
 ../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c:640:7:vPortValidateInterruptPriority	4

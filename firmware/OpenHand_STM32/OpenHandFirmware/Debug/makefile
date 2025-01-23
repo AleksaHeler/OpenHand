@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (11.3.rel1)
+# Toolchain: GNU Tools for STM32 (12.3.rel1)
 ################################################################################
 
 -include ../makefile.init
@@ -16,8 +16,6 @@ RM := rm -rf
 -include Drivers/STM32F1xx_HAL_Driver/Src/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk
--include Core/Drivers/led/subdir.mk
--include Core/Drivers/btn/subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -66,8 +64,8 @@ all: main-build
 main-build: OpenHandFirmware.elf secondary-outputs
 
 # Tool invocations
-OpenHandFirmware.elf OpenHandFirmware.map: $(OBJS) $(USER_OBJS) C:\Users\aleksaheler\Documents\GitHub\ProstheticHand\firmware\OpenHand_STM32\OpenHandFirmware\STM32F103RBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "OpenHandFirmware.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\aleksaheler\Documents\GitHub\ProstheticHand\firmware\OpenHand_STM32\OpenHandFirmware\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OpenHandFirmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+OpenHandFirmware.elf OpenHandFirmware.map: $(OBJS) $(USER_OBJS) C:\Users\aleks\Documents\GitHub\ProstheticHand\firmware\OpenHand_STM32\OpenHandFirmware\STM32F103RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "OpenHandFirmware.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\aleks\Documents\GitHub\ProstheticHand\firmware\OpenHand_STM32\OpenHandFirmware\STM32F103RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="OpenHandFirmware.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

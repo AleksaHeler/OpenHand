@@ -7,7 +7,7 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2024 STMicroelectronics.
+  * Copyright (c) 2025 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -59,30 +59,8 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define MOTOR_01_EN_Pin GPIO_PIN_5
-#define MOTOR_01_EN_GPIO_Port GPIOC
-#define MOTOR_02_EN_Pin GPIO_PIN_1
-#define MOTOR_02_EN_GPIO_Port GPIOB
-#define MOTOR_03_EN_Pin GPIO_PIN_10
-#define MOTOR_03_EN_GPIO_Port GPIOB
-#define MOTOR_01_DIR_Pin GPIO_PIN_7
-#define MOTOR_01_DIR_GPIO_Port GPIOC
-#define MOTOR_01_PWM_Pin GPIO_PIN_8
-#define MOTOR_01_PWM_GPIO_Port GPIOC
-#define MOTOR_02_DIR_Pin GPIO_PIN_9
-#define MOTOR_02_DIR_GPIO_Port GPIOC
-#define MOTOR_02_PWM_Pin GPIO_PIN_8
-#define MOTOR_02_PWM_GPIO_Port GPIOA
-#define MOTOR_03_DIR_Pin GPIO_PIN_9
-#define MOTOR_03_DIR_GPIO_Port GPIOA
-#define MOTOR_03_PWM_Pin GPIO_PIN_10
-#define MOTOR_03_PWM_GPIO_Port GPIOA
-#define LED_01_Pin GPIO_PIN_5
-#define LED_01_GPIO_Port GPIOB
-#define LED_02_Pin GPIO_PIN_6
-#define LED_02_GPIO_Port GPIOB
-#define BTN_Pin GPIO_PIN_7
-#define BTN_GPIO_Port GPIOB
+#define BTN_Pin GPIO_PIN_15
+#define BTN_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
 
