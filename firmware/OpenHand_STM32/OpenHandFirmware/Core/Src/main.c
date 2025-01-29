@@ -18,7 +18,6 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "cmsis_os.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -54,20 +53,6 @@ UART_HandleTypeDef huart4;
 
 PCD_HandleTypeDef hpcd_USB_FS;
 
-/* Definitions for hand_control */
-osThreadId_t hand_controlHandle;
-const osThreadAttr_t hand_control_attributes = {
-  .name = "hand_control",
-  .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityNormal,
-};
-/* Definitions for system_health */
-osThreadId_t system_healthHandle;
-const osThreadAttr_t system_health_attributes = {
-  .name = "system_health",
-  .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityNormal,
-};
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -83,9 +68,6 @@ static void MX_TIM8_Init(void);
 static void MX_ADC1_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_UART4_Init(void);
-void hand_control_function(void *argument);
-void system_health_function(void *argument);
-
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -137,45 +119,6 @@ int main(void)
   //HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);  /* Motor 2 */
   //HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);  /* Motor 3 */
   /* USER CODE END 2 */
-
-  /* Init scheduler */
-  osKernelInitialize();
-
-  /* USER CODE BEGIN RTOS_MUTEX */
-  /* add mutexes, ... */
-  /* USER CODE END RTOS_MUTEX */
-
-  /* USER CODE BEGIN RTOS_SEMAPHORES */
-  /* add semaphores, ... */
-  /* USER CODE END RTOS_SEMAPHORES */
-
-  /* USER CODE BEGIN RTOS_TIMERS */
-  /* start timers, add new ones, ... */
-  /* USER CODE END RTOS_TIMERS */
-
-  /* USER CODE BEGIN RTOS_QUEUES */
-  /* add queues, ... */
-  /* USER CODE END RTOS_QUEUES */
-
-  /* Create the thread(s) */
-  /* creation of hand_control */
-  hand_controlHandle = osThreadNew(hand_control_function, NULL, &hand_control_attributes);
-
-  /* creation of system_health */
-  system_healthHandle = osThreadNew(system_health_function, NULL, &system_health_attributes);
-
-  /* USER CODE BEGIN RTOS_THREADS */
-  /* add threads, ... */
-  /* USER CODE END RTOS_THREADS */
-
-  /* USER CODE BEGIN RTOS_EVENTS */
-  /* add events, ... */
-  /* USER CODE END RTOS_EVENTS */
-
-  /* Start scheduler */
-  osKernelStart();
-
-  /* We should never get here as control is now taken by the scheduler */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
@@ -480,9 +423,9 @@ static void MX_TIM8_Init(void)
 
   /* USER CODE END TIM8_Init 1 */
   htim8.Instance = TIM8;
-  htim8.Init.Prescaler = 0;
+  htim8.Init.Prescaler = 72;
   htim8.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim8.Init.Period = 65535;
+  htim8.Init.Period = 20-1;
   htim8.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim8.Init.RepetitionCounter = 0;
   htim8.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
@@ -625,49 +568,49 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4|GPIO_PIN_5, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, LED_01_Pin|LED_02_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2|GPIO_PIN_10|GPIO_PIN_11|GPIO_PIN_12
-                          |GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, MOTOR_01_EN_Pin|MOTOR_02_EN_Pin|MOTOR_03_EN_Pin|HAPTIC_DIR_Pin
+                          |MOTOR_01_DIR_Pin|MOTOR_02_DIR_Pin|MOTOR_03_DIR_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_12, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(HAPTIC_EN_GPIO_Port, HAPTIC_EN_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : PA4 PA5 */
-  GPIO_InitStruct.Pin = GPIO_PIN_4|GPIO_PIN_5;
+  /*Configure GPIO pins : LED_01_Pin LED_02_Pin */
+  GPIO_InitStruct.Pin = LED_01_Pin|LED_02_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PB2 PB10 PB11 PB12
-                           PB13 PB14 PB15 */
-  GPIO_InitStruct.Pin = GPIO_PIN_2|GPIO_PIN_10|GPIO_PIN_11|GPIO_PIN_12
-                          |GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15;
+  /*Configure GPIO pins : MOTOR_01_EN_Pin MOTOR_02_EN_Pin MOTOR_03_EN_Pin HAPTIC_DIR_Pin
+                           MOTOR_01_DIR_Pin MOTOR_02_DIR_Pin MOTOR_03_DIR_Pin */
+  GPIO_InitStruct.Pin = MOTOR_01_EN_Pin|MOTOR_02_EN_Pin|MOTOR_03_EN_Pin|HAPTIC_DIR_Pin
+                          |MOTOR_01_DIR_Pin|MOTOR_02_DIR_Pin|MOTOR_03_DIR_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PA8 PA9 PA10 BTN_Pin */
-  GPIO_InitStruct.Pin = GPIO_PIN_8|GPIO_PIN_9|GPIO_PIN_10|BTN_Pin;
+  /*Configure GPIO pins : MOTOR_01_FAULT_Pin MOTOR_02_FAULT_Pin MOTOR_03_FAULT_Pin BTN_Pin */
+  GPIO_InitStruct.Pin = MOTOR_01_FAULT_Pin|MOTOR_02_FAULT_Pin|MOTOR_03_FAULT_Pin|BTN_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : PC12 */
-  GPIO_InitStruct.Pin = GPIO_PIN_12;
+  /*Configure GPIO pin : HAPTIC_EN_Pin */
+  GPIO_InitStruct.Pin = HAPTIC_EN_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+  HAL_GPIO_Init(HAPTIC_EN_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : PD2 */
-  GPIO_InitStruct.Pin = GPIO_PIN_2;
+  /*Configure GPIO pin : HAPTIC_FAULT_Pin */
+  GPIO_InitStruct.Pin = HAPTIC_FAULT_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+  HAL_GPIO_Init(HAPTIC_FAULT_GPIO_Port, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
@@ -675,44 +618,6 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 /* USER CODE END 4 */
-
-/* USER CODE BEGIN Header_hand_control_function */
-/**
-* @brief Function implementing the hand_control thread.
-*        For now only actuates motors to open/close the hand on button press
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_hand_control_function */
-void hand_control_function(void *argument)
-{
-  /* USER CODE BEGIN 5 */
-  /* Infinite loop */
-  for(;;)
-  {
-  	// HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_6); /* LED_02 */
-  	osDelay(1000);
-  }
-  /* USER CODE END 5 */
-}
-
-/* USER CODE BEGIN Header_system_health_function */
-/**
-* @brief Function implementing the system_health thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_system_health_function */
-void system_health_function(void *argument)
-{
-  /* USER CODE BEGIN system_health_function */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END system_health_function */
-}
 
 /**
   * @brief  Period elapsed callback in non blocking mode

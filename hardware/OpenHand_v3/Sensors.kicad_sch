@@ -3882,7 +3882,7 @@
 	)
 	(text "CALCULATOR"
 		(exclude_from_sim no)
-		(at 106.68 72.898 0)
+		(at 107.188 72.644 0)
 		(effects
 			(font
 				(size 1.27 1.27)
