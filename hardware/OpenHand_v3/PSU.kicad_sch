@@ -3,11 +3,11 @@
 	(generator "eeschema")
 	(generator_version "8.0")
 	(uuid "2b54d1ce-d017-42a6-968a-cd3bd3f43d58")
-	(paper "A4")
+	(paper "A3")
 	(title_block
 		(title "OpenHand prosthetic hand controller project")
-		(date "2024-01-31")
-		(rev "v1.0")
+		(date "2025-01-31")
+		(rev "v3.0")
 		(comment 1 "Aleksa Heler")
 	)
 	(lib_symbols

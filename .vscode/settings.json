@@ -1,0 +1,8 @@
+{
+  "files.associations": {
+    "led_e.h": "c",
+    "defines.h": "c",
+    "global.h": "c",
+    "os_e.h": "c"
+  }
+}

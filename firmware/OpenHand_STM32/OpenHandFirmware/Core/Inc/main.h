@@ -79,6 +79,10 @@ void Error_Handler(void);
 #define MOTOR_01_ENCODER_A_GPIO_Port GPIOA
 #define MOTOR_01_ENCODER_B_Pin GPIO_PIN_7
 #define MOTOR_01_ENCODER_B_GPIO_Port GPIOA
+#define PCB_TEMP_01_Pin GPIO_PIN_4
+#define PCB_TEMP_01_GPIO_Port GPIOC
+#define PCB_TEMP_02_Pin GPIO_PIN_5
+#define PCB_TEMP_02_GPIO_Port GPIOC
 #define BATT_SENSE_Pin GPIO_PIN_0
 #define BATT_SENSE_GPIO_Port GPIOB
 #define VIN_5V_SENSE_Pin GPIO_PIN_1

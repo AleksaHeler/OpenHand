@@ -1,0 +1,5 @@
+../Core/Drivers/led/led.c:34:14:led_f_InitChannel_s	4	static
+../Core/Drivers/led/led.c:40:14:led_f_HandleChannel_s	4	static
+../Core/Drivers/led/led.c:51:21:led_f_GetInstance_s	4	static
+../Core/Drivers/led/led.c:61:14:led_f_Init_s	24	static
+../Core/Drivers/led/led.c:89:14:led_f_Handle_s	24	static

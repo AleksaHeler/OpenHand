@@ -6,8 +6,8 @@
 	(paper "A3")
 	(title_block
 		(title "OpenHand prosthetic hand controller project")
-		(date "2024-01-31")
-		(rev "v1.0")
+		(date "2025-01-31")
+		(rev "v3.0")
 		(comment 1 "Aleksa Heler")
 	)
 	(lib_symbols
@@ -4199,7 +4199,7 @@
 		(uuid "286c483b-360e-4651-b4fe-0aa539eafc90")
 	)
 	(junction
-		(at 345.44 226.06)
+		(at 321.31 229.87)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "297db3aa-e362-4b6a-8b78-1816dd80b80b")
@@ -4325,6 +4325,12 @@
 		(uuid "a53b1040-7e1f-4cb0-a0e6-111b5d2a6810")
 	)
 	(junction
+		(at 358.14 229.87)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a5de9319-1cec-4332-8d6a-4ebc3d132971")
+	)
+	(junction
 		(at 364.49 149.86)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4349,16 +4355,22 @@
 		(uuid "c475e342-ff46-4675-824c-daf41379fc98")
 	)
 	(junction
-		(at 335.28 226.06)
+		(at 383.54 229.87)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "e7284200-0410-4bc7-8b2c-99bd4d04c7f2")
+		(uuid "e220572a-f5b2-4734-9d10-4372ef88fc5f")
 	)
 	(junction
 		(at 109.22 154.94)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e81552d6-a0ab-4d00-9fea-785ba9d9bc56")
+	)
+	(junction
+		(at 332.74 229.87)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e936b66c-4e3f-4a09-94c9-39d7390944bf")
 	)
 	(junction
 		(at 247.65 252.73)
@@ -4526,6 +4538,16 @@
 		)
 		(uuid "13800100-6500-4d02-b8df-1ca0d23f981b")
 	)
+	(polyline
+		(pts
+			(xy 328.93 219.71) (xy 397.256 219.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13a40512-2bf7-4708-8ba2-068248ce1ee7")
+	)
 	(wire
 		(pts
 			(xy 241.3 157.48) (xy 250.19 157.48)
@@ -4568,7 +4590,17 @@
 	)
 	(wire
 		(pts
-			(xy 345.44 228.6) (xy 345.44 226.06)
+			(xy 342.9 224.79) (xy 342.9 229.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1a7635f7-9f63-4929-af0f-1215c039a741")
+	)
+	(wire
+		(pts
+			(xy 321.31 232.41) (xy 321.31 229.87)
 		)
 		(stroke
 			(width 0)
@@ -4648,6 +4680,16 @@
 	)
 	(wire
 		(pts
+			(xy 383.54 229.87) (xy 393.7 229.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "254c3b77-cf32-4053-92e5-8a1467f50023")
+	)
+	(wire
+		(pts
 			(xy 267.97 228.6) (xy 247.65 228.6)
 		)
 		(stroke
@@ -4688,13 +4730,23 @@
 	)
 	(wire
 		(pts
-			(xy 345.44 220.98) (xy 345.44 226.06)
+			(xy 321.31 224.79) (xy 321.31 229.87)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "2a5327f8-7b18-4b4f-a1b0-3df3176e6c17")
+	)
+	(wire
+		(pts
+			(xy 393.7 224.79) (xy 393.7 229.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2a77742e-2998-4292-abcf-7c02ef6e696c")
 	)
 	(wire
 		(pts
@@ -4818,6 +4870,16 @@
 	)
 	(wire
 		(pts
+			(xy 321.31 229.87) (xy 332.74 229.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4507b3a7-abe1-4b75-a611-d2a5bd2237d9")
+	)
+	(wire
+		(pts
 			(xy 377.19 63.5) (xy 387.35 63.5)
 		)
 		(stroke
@@ -4835,6 +4897,16 @@
 			(type default)
 		)
 		(uuid "497534d8-d299-4c1c-b7d3-7a528f6e51ab")
+	)
+	(wire
+		(pts
+			(xy 358.14 229.87) (xy 368.3 229.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a881fae-7f34-4c31-b356-14d3aa150d2c")
 	)
 	(wire
 		(pts
@@ -4878,6 +4950,16 @@
 	)
 	(wire
 		(pts
+			(xy 375.92 229.87) (xy 383.54 229.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "53f66253-86d8-4171-aaab-ca49172b15fe")
+	)
+	(wire
+		(pts
 			(xy 373.38 58.42) (xy 373.38 55.88)
 		)
 		(stroke
@@ -4915,6 +4997,16 @@
 			(type default)
 		)
 		(uuid "5a512314-2ad7-472b-9a99-d72b23ef24c9")
+	)
+	(wire
+		(pts
+			(xy 332.74 229.87) (xy 342.9 229.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e1260d3-2dd5-49a9-9a1f-8f5876b576a1")
 	)
 	(wire
 		(pts
@@ -5026,6 +5118,16 @@
 		)
 		(uuid "6e147744-8a5b-4915-a247-ae1427c9ee2d")
 	)
+	(polyline
+		(pts
+			(xy 307.34 219.71) (xy 325.12 219.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7176ae1d-a55b-406b-a74e-8b9787b86524")
+	)
 	(wire
 		(pts
 			(xy 373.38 68.58) (xy 373.38 69.85)
@@ -5108,16 +5210,6 @@
 	)
 	(wire
 		(pts
-			(xy 323.85 220.98) (xy 323.85 226.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7ac54cff-688c-46d4-ac28-6a89cdd5cfb9")
-	)
-	(wire
-		(pts
 			(xy 331.47 57.15) (xy 326.39 57.15)
 		)
 		(stroke
@@ -5168,7 +5260,7 @@
 	)
 	(wire
 		(pts
-			(xy 335.28 226.06) (xy 345.44 226.06)
+			(xy 311.15 229.87) (xy 321.31 229.87)
 		)
 		(stroke
 			(width 0)
@@ -5328,6 +5420,16 @@
 	)
 	(wire
 		(pts
+			(xy 358.14 224.79) (xy 358.14 229.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "96721725-54b0-4301-987a-8ec1a3976ea3")
+	)
+	(wire
+		(pts
 			(xy 360.68 52.07) (xy 360.68 63.5)
 		)
 		(stroke
@@ -5398,16 +5500,6 @@
 	)
 	(wire
 		(pts
-			(xy 77.47 195.58) (xy 86.36 195.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a9607b6a-dd6f-4fb5-933e-7b8779b1299a")
-	)
-	(wire
-		(pts
 			(xy 238.76 71.12) (xy 236.22 71.12)
 		)
 		(stroke
@@ -5468,6 +5560,16 @@
 	)
 	(wire
 		(pts
+			(xy 368.3 224.79) (xy 368.3 229.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b4564996-996e-4e7f-b426-4d417391a843")
+	)
+	(wire
+		(pts
 			(xy 77.47 220.98) (xy 86.36 220.98)
 		)
 		(stroke
@@ -5515,16 +5617,6 @@
 			(type default)
 		)
 		(uuid "bb4d84b9-2ba6-4c76-be07-8c45c1367572")
-	)
-	(wire
-		(pts
-			(xy 323.85 226.06) (xy 335.28 226.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bda2df69-c137-4966-b79d-c0e1cdc96629")
 	)
 	(wire
 		(pts
@@ -5588,6 +5680,16 @@
 	)
 	(wire
 		(pts
+			(xy 332.74 224.79) (xy 332.74 229.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c54ac23f-3c59-4d16-a01c-3230bb124b55")
+	)
+	(wire
+		(pts
 			(xy 40.64 76.2) (xy 45.72 76.2)
 		)
 		(stroke
@@ -5645,6 +5747,16 @@
 			(type default)
 		)
 		(uuid "cc3e547a-263f-41d5-b25d-b729f8ca4f6a")
+	)
+	(wire
+		(pts
+			(xy 375.92 229.87) (xy 375.92 227.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc8b37b3-6bf1-4c3f-8583-629331521fa5")
 	)
 	(wire
 		(pts
@@ -5728,7 +5840,7 @@
 	)
 	(wire
 		(pts
-			(xy 335.28 220.98) (xy 335.28 226.06)
+			(xy 311.15 224.79) (xy 311.15 229.87)
 		)
 		(stroke
 			(width 0)
@@ -5758,6 +5870,16 @@
 	)
 	(wire
 		(pts
+			(xy 350.52 229.87) (xy 350.52 227.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dcbedda3-26d4-4005-9a94-09210db45d3d")
+	)
+	(wire
+		(pts
 			(xy 106.68 154.94) (xy 109.22 154.94)
 		)
 		(stroke
@@ -5765,16 +5887,6 @@
 			(type default)
 		)
 		(uuid "df9d2641-228f-49fc-b24a-28eac77ce4bb")
-	)
-	(wire
-		(pts
-			(xy 77.47 193.04) (xy 86.36 193.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dffe7374-ccc1-4197-abcc-3bb84c06aa31")
 	)
 	(wire
 		(pts
@@ -5835,6 +5947,16 @@
 			(type default)
 		)
 		(uuid "eb9be739-33d5-4adb-ae7a-875c97510c66")
+	)
+	(wire
+		(pts
+			(xy 350.52 229.87) (xy 358.14 229.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ecd28bd7-2321-466c-a686-cdbb9178abe0")
 	)
 	(wire
 		(pts
@@ -5915,6 +6037,16 @@
 			(type default)
 		)
 		(uuid "f8f7d815-77f0-4cd6-a71d-c712183e7d11")
+	)
+	(wire
+		(pts
+			(xy 383.54 224.79) (xy 383.54 229.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fa762d6c-c62d-4c0a-ac8e-7b1b1db26cd3")
 	)
 	(wire
 		(pts
@@ -6215,6 +6347,17 @@
 		)
 		(uuid "27f959fb-b131-4977-b166-93a7b98c0267")
 	)
+	(text "PCB Temp"
+		(exclude_from_sim no)
+		(at 69.342 195.072 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "2dd11c62-9e13-45a3-8d49-96f3de902e42")
+	)
 	(text "Haptic feedback motor"
 		(exclude_from_sim no)
 		(at 68.834 83.566 0)
@@ -6298,6 +6441,17 @@
 			(justify left bottom)
 		)
 		(uuid "691a312e-0b46-41d3-920d-ff8c7dd5bdac")
+	)
+	(text "Power supply TP"
+		(exclude_from_sim no)
+		(at 316.23 218.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+		)
+		(uuid "6984a050-020a-48e2-9cb4-eeaccebcec6e")
 	)
 	(text "Motors"
 		(exclude_from_sim no)
@@ -6436,7 +6590,7 @@
 		)
 		(uuid "bcfb194c-897e-4f02-a5bf-04781618acf5")
 	)
-	(text "GROUND TEST POINTS"
+	(text "GROUND/POWER TEST POINTS"
 		(exclude_from_sim no)
 		(at 304.8 209.55 0)
 		(effects
@@ -6459,6 +6613,17 @@
 			(justify right bottom)
 		)
 		(uuid "dafb2866-5173-421d-b1db-70eb9d4a94a3")
+	)
+	(text "GPIO breakout TP"
+		(exclude_from_sim no)
+		(at 360.426 218.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+		)
+		(uuid "e182f6fa-196e-4ff1-b6fa-abde0ca24b2c")
 	)
 	(text "EMG sensors"
 		(exclude_from_sim no)
@@ -6597,17 +6762,6 @@
 		)
 		(uuid "281f52e5-58c2-4ee5-a5ee-34d136edbdf5")
 	)
-	(label "PC5"
-		(at 83.82 195.58 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 0.3 0.3)
-			)
-			(justify left bottom)
-		)
-		(uuid "3df337a7-0de1-4f72-af85-31b1e956db27")
-	)
 	(label "PB3"
 		(at 124.46 213.36 0)
 		(fields_autoplaced yes)
@@ -6695,17 +6849,6 @@
 			(justify left bottom)
 		)
 		(uuid "f71babc1-bbd6-4730-a15c-0fc81b68ff1a")
-	)
-	(label "PC4"
-		(at 83.82 193.04 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 0.3 0.3)
-			)
-			(justify left bottom)
-		)
-		(uuid "fd785521-391e-41a8-8c9c-74e5af5b4b3d")
 	)
 	(label "PA3"
 		(at 124.46 170.18 0)
@@ -7928,6 +8071,28 @@
 			)
 		)
 	)
+	(global_label "PCB_TEMP_01"
+		(shape input)
+		(at 86.36 193.04 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d87532a7-9003-425c-8e90-ff12fb7aab50")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 70.3726 193.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "MOTOR_03_FAULT"
 		(shape input)
 		(at 121.92 187.96 0)
@@ -8170,6 +8335,28 @@
 			)
 		)
 	)
+	(global_label "PCB_TEMP_02"
+		(shape input)
+		(at 86.36 195.58 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e734a9e5-f643-4982-81c8-1368b5b74389")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 70.3726 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "TRIM_POT_02"
 		(shape output)
 		(at 295.91 160.02 180)
@@ -8365,6 +8552,70 @@
 				)
 				(justify right)
 				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 383.54 224.79 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "02aa5233-9876-475b-8eea-179da87eb428")
+		(property "Reference" "TP10"
+			(at 383.54 223.52 0)
+			(effects
+				(font
+					(size 0.5 0.5)
+				)
+			)
+		)
+		(property "Value" "TP_5V_1"
+			(at 383.54 222.25 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 378.46 224.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 378.46 224.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 383.54 224.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "348a463b-7df7-4d3a-aa1a-9fcf65bddb63")
+		)
+		(instances
+			(project "OpenHand_v3"
+				(path "/f1fbd835-8408-4592-854c-2fbec9d052ec"
+					(reference "TP10")
+					(unit 1)
+				)
 			)
 		)
 	)
@@ -9192,6 +9443,70 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 332.74 224.79 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "22fd434c-8980-45b9-b939-f9c88c0c398b")
+		(property "Reference" "TP1"
+			(at 332.74 223.52 0)
+			(effects
+				(font
+					(size 0.5 0.5)
+				)
+			)
+		)
+		(property "Value" "TP_GND_3"
+			(at 332.74 222.25 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 327.66 224.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 327.66 224.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 332.74 224.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8c07f1a9-96c6-49ae-9e40-408282f30d57")
+		)
+		(instances
+			(project "OpenHand_v3"
+				(path "/f1fbd835-8408-4592-854c-2fbec9d052ec"
+					(reference "TP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 237.49 144.78 180)
 		(unit 1)
@@ -9253,6 +9568,70 @@
 			(project "OpenHand_v3"
 				(path "/f1fbd835-8408-4592-854c-2fbec9d052ec"
 					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 342.9 224.79 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "25f71553-19a5-4c3b-be82-1144d4ab9b80")
+		(property "Reference" "TP5"
+			(at 342.9 223.52 0)
+			(effects
+				(font
+					(size 0.5 0.5)
+				)
+			)
+		)
+		(property "Value" "TP_GND_4"
+			(at 342.9 222.25 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 337.82 224.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 337.82 224.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 342.9 224.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "175ce2b9-02ce-49de-9171-3c96434647b7")
+		)
+		(instances
+			(project "OpenHand_v3"
+				(path "/f1fbd835-8408-4592-854c-2fbec9d052ec"
+					(reference "TP5")
 					(unit 1)
 				)
 			)
@@ -9742,70 +10121,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint_Small")
-		(at 77.47 193.04 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2cf90839-3802-4140-b44d-481d262fcee0")
-		(property "Reference" "TP5"
-			(at 74.676 193.548 0)
-			(effects
-				(font
-					(size 0.5 0.5)
-				)
-			)
-		)
-		(property "Value" "TP_UC_PC4"
-			(at 74.168 192.532 0)
-			(effects
-				(font
-					(size 0.5 0.5)
-				)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
-			(at 82.55 193.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 82.55 193.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 77.47 193.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a0bbe8c6-48c6-425f-a596-aa8424f73ad2")
-		)
-		(instances
-			(project "OpenHand_v3"
-				(path "/f1fbd835-8408-4592-854c-2fbec9d052ec"
-					(reference "TP5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 254 144.78 90)
 		(unit 1)
@@ -10206,7 +10521,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint_Small")
-		(at 335.28 220.98 180)
+		(at 311.15 224.79 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10214,15 +10529,15 @@
 		(dnp no)
 		(uuid "410bb921-92f3-4900-bcfb-061e6f85060f")
 		(property "Reference" "TP7"
-			(at 335.28 219.71 0)
+			(at 311.15 223.52 0)
 			(effects
 				(font
 					(size 0.5 0.5)
 				)
 			)
 		)
-		(property "Value" "TP_GND_2"
-			(at 335.28 218.44 0)
+		(property "Value" "TP_GND_1"
+			(at 311.15 222.25 0)
 			(effects
 				(font
 					(size 1 1)
@@ -10230,7 +10545,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
-			(at 330.2 220.98 0)
+			(at 306.07 224.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10239,7 +10554,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 330.2 220.98 0)
+			(at 306.07 224.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10248,7 +10563,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 335.28 220.98 0)
+			(at 311.15 224.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10525,6 +10840,70 @@
 			(project "OpenHand_v3"
 				(path "/f1fbd835-8408-4592-854c-2fbec9d052ec"
 					(reference "TP38")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 393.7 224.79 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "63aea2d2-9997-401a-8f5c-123211803428")
+		(property "Reference" "TP11"
+			(at 393.7 223.52 0)
+			(effects
+				(font
+					(size 0.5 0.5)
+				)
+			)
+		)
+		(property "Value" "TP_5V_2"
+			(at 393.7 222.25 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 388.62 224.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 388.62 224.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 393.7 224.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d77ffd85-b55b-493b-b86b-bd612a3ccbad")
+		)
+		(instances
+			(project "OpenHand_v3"
+				(path "/f1fbd835-8408-4592-854c-2fbec9d052ec"
+					(reference "TP11")
 					(unit 1)
 				)
 			)
@@ -11602,70 +11981,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint_Small")
-		(at 323.85 220.98 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "7e9ac586-350c-4cbb-a016-c1273166344c")
-		(property "Reference" "TP6"
-			(at 323.85 219.71 0)
-			(effects
-				(font
-					(size 0.5 0.5)
-				)
-			)
-		)
-		(property "Value" "TP_GND_1"
-			(at 323.85 218.44 0)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
-			(at 318.77 220.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 318.77 220.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 323.85 220.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d3a29c22-51c6-48d5-8026-219dffe3ed0b")
-		)
-		(instances
-			(project "OpenHand_v3"
-				(path "/f1fbd835-8408-4592-854c-2fbec9d052ec"
-					(reference "TP6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
 		(at 267.97 223.52 0)
 		(unit 1)
@@ -11863,6 +12178,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5V")
+		(at 375.92 227.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "956e3555-a5c7-48c5-8d23-89f70c9b86c4")
+		(property "Reference" "#PWR0106"
+			(at 375.92 231.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 375.92 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 375.92 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 375.92 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 375.92 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4a0d6a23-9a31-4f86-83c6-c57dbb871cd3")
+		)
+		(instances
+			(project "OpenHand_v3"
+				(path "/f1fbd835-8408-4592-854c-2fbec9d052ec"
+					(reference "#PWR0106")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 387.35 69.85 0)
 		(unit 1)
@@ -12002,7 +12382,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint_Small")
-		(at 345.44 220.98 180)
+		(at 321.31 224.79 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12010,15 +12390,15 @@
 		(dnp no)
 		(uuid "9b7b6bc8-f578-4465-b0bf-5e99e40ac573")
 		(property "Reference" "TP8"
-			(at 345.44 219.71 0)
+			(at 321.31 223.52 0)
 			(effects
 				(font
 					(size 0.5 0.5)
 				)
 			)
 		)
-		(property "Value" "TP_GND_3"
-			(at 345.44 218.44 0)
+		(property "Value" "TP_GND_2"
+			(at 321.31 222.25 0)
 			(effects
 				(font
 					(size 1 1)
@@ -12026,7 +12406,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
-			(at 340.36 220.98 0)
+			(at 316.23 224.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12035,7 +12415,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 340.36 220.98 0)
+			(at 316.23 224.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12044,7 +12424,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 345.44 220.98 0)
+			(at 321.31 224.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12324,6 +12704,70 @@
 			(project "OpenHand_v3"
 				(path "/f1fbd835-8408-4592-854c-2fbec9d052ec"
 					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 368.3 224.79 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ab180988-58ea-42a4-af65-0908c4fa17bf")
+		(property "Reference" "TP9"
+			(at 368.3 223.52 0)
+			(effects
+				(font
+					(size 0.5 0.5)
+				)
+			)
+		)
+		(property "Value" "TP_3V3_2"
+			(at 368.3 222.25 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 363.22 224.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 363.22 224.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 368.3 224.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "253ddb81-1f3d-4bee-93c5-e21f42fe3788")
+		)
+		(instances
+			(project "OpenHand_v3"
+				(path "/f1fbd835-8408-4592-854c-2fbec9d052ec"
+					(reference "TP9")
 					(unit 1)
 				)
 			)
@@ -13377,70 +13821,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint_Small")
-		(at 77.47 195.58 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "c81ac2b3-2549-4dc7-a9b4-08d48ca8e8ea")
-		(property "Reference" "TP1"
-			(at 74.676 196.088 0)
-			(effects
-				(font
-					(size 0.5 0.5)
-				)
-			)
-		)
-		(property "Value" "TP_UC_PC5"
-			(at 74.168 195.072 0)
-			(effects
-				(font
-					(size 0.5 0.5)
-				)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
-			(at 82.55 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 82.55 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 77.47 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "67c22f8d-10cb-43b3-8aae-740a8d6fb374")
-		)
-		(instances
-			(project "OpenHand_v3"
-				(path "/f1fbd835-8408-4592-854c-2fbec9d052ec"
-					(reference "TP1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3V3")
 		(at 99.06 153.67 0)
 		(unit 1)
@@ -14180,7 +14560,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 345.44 228.6 0)
+		(at 321.31 232.41 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14189,7 +14569,7 @@
 		(fields_autoplaced yes)
 		(uuid "e49200cc-3ff3-495c-9ddc-03b20ef3bfcf")
 		(property "Reference" "#PWR033"
-			(at 345.44 234.95 0)
+			(at 321.31 238.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14198,7 +14578,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 345.44 233.68 0)
+			(at 321.31 237.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14207,7 +14587,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 345.44 228.6 0)
+			(at 321.31 232.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14216,7 +14596,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 345.44 228.6 0)
+			(at 321.31 232.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14225,7 +14605,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 345.44 228.6 0)
+			(at 321.31 232.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14448,6 +14828,70 @@
 			(project "OpenHand_v3"
 				(path "/f1fbd835-8408-4592-854c-2fbec9d052ec"
 					(reference "RV1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 358.14 224.79 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f47563b4-f62b-413f-8bcf-3f364df28c75")
+		(property "Reference" "TP6"
+			(at 358.14 223.52 0)
+			(effects
+				(font
+					(size 0.5 0.5)
+				)
+			)
+		)
+		(property "Value" "TP_3V3_1"
+			(at 358.14 222.25 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 353.06 224.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 353.06 224.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 358.14 224.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "194e4885-0faa-4e96-b72c-723c1acbfa30")
+		)
+		(instances
+			(project "OpenHand_v3"
+				(path "/f1fbd835-8408-4592-854c-2fbec9d052ec"
+					(reference "TP6")
 					(unit 1)
 				)
 			)
@@ -14722,6 +15166,72 @@
 			(project "OpenHand_v3"
 				(path "/f1fbd835-8408-4592-854c-2fbec9d052ec"
 					(reference "J6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 350.52 227.33 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fe35608f-c59c-4da7-aa0b-725cefae22dd")
+		(property "Reference" "#PWR0105"
+			(at 350.52 231.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 350.52 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 350.52 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 350.52 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 350.52 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "aa3c8042-272b-4e79-9fbd-09a31d83f98a")
+		)
+		(instances
+			(project "OpenHand_v3"
+				(path "/f1fbd835-8408-4592-854c-2fbec9d052ec"
+					(reference "#PWR0105")
 					(unit 1)
 				)
 			)

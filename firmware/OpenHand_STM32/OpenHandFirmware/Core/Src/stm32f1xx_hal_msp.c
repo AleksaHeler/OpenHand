@@ -107,10 +107,13 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc)
     PC1     ------> ADC1_IN11
     PC2     ------> ADC1_IN12
     PC3     ------> ADC1_IN13
+    PC4     ------> ADC1_IN14
+    PC5     ------> ADC1_IN15
     PB0     ------> ADC1_IN8
     PB1     ------> ADC1_IN9
     */
-    GPIO_InitStruct.Pin = EMG_01_Pin|EMG_02_Pin|TRIM_POT_01_Pin|TRIM_POT_02_Pin;
+    GPIO_InitStruct.Pin = EMG_01_Pin|EMG_02_Pin|TRIM_POT_01_Pin|TRIM_POT_02_Pin
+                          |PCB_TEMP_01_Pin|PCB_TEMP_02_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
     HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
@@ -147,10 +150,13 @@ void HAL_ADC_MspDeInit(ADC_HandleTypeDef* hadc)
     PC1     ------> ADC1_IN11
     PC2     ------> ADC1_IN12
     PC3     ------> ADC1_IN13
+    PC4     ------> ADC1_IN14
+    PC5     ------> ADC1_IN15
     PB0     ------> ADC1_IN8
     PB1     ------> ADC1_IN9
     */
-    HAL_GPIO_DeInit(GPIOC, EMG_01_Pin|EMG_02_Pin|TRIM_POT_01_Pin|TRIM_POT_02_Pin);
+    HAL_GPIO_DeInit(GPIOC, EMG_01_Pin|EMG_02_Pin|TRIM_POT_01_Pin|TRIM_POT_02_Pin
+                          |PCB_TEMP_01_Pin|PCB_TEMP_02_Pin);
 
     HAL_GPIO_DeInit(GPIOB, BATT_SENSE_Pin|VIN_5V_SENSE_Pin);
 

@@ -6,7 +6,24 @@ In folder "ProstheticHand_ESP32" is PlatformIO project with code for our initial
 
 # Sofware design and architecture
 
-Architecture idea:
+We have our '**operating system**' (OS), which holds all info about all other components, and calls their init/handle functions.  
+Then we have '**drivers**' which are low level components, interacting with HW directly.  
+And there are '**application**' high level components which use drivers to actually implement the main code logic.  
+
+*TODO: Create a chart/graphic of the SW architecture!*
+
+OS should make sure we have consistent 10ms cycle, and measure every init/handle function execution time and keep them in global memory for debugging (min, max, last execution time for each driver).  
+OS can store all data about all components in a custom structure holding pointers to init/handle functions, and control register of the components:  
+```
+typedef struct
+{
+  ReturnStatus (*init)(void *params);
+  ReturnStatus (*handle)(void *params, void (*callback)(void));
+  bit32* comp_g_Control_b32;
+} ComponentInterface;
+```
+
+Examples:
  - Drivers (low level, direct access to HW)
   - LED driver
   - button driver
@@ -16,11 +33,17 @@ Architecture idea:
   - I2C driver
   - UART, or USB comms driver to log info
   - processor/cpu driver/internal - checking free memory, die temperature etc.
- - Application (high level, only interacts with drivers)
-  - FSM - finite state machine
-   - States: init, calibration, full grip, cup grip, pinch, fault/failsafe
+ - Application (high level, onyl interacts with drivers)
+  - FSM - finite state machine (init, calibration, full grip, cup grip, pinch, fault/failsafe)
   - logger (state of everything on serial - usb or uart if enabled)
- - OS - main function basically, control and measure execution time
+
+Folder structure: 
+Core:
+ - Src - main.c
+ - Inc - project defines, bitfield defines etc.
+ - Drivers - low level drivers
+ - Application - high level drivers
+ - OS - master coordinator, handling drivers and application function calls, measuring, timekeeping etc.
 
 Naming scheme:
  - functions:
@@ -29,13 +52,15 @@ Naming scheme:
  - variables:
    - led_c_NumOfLeds_u8; // constant unsigned 8bit
    - emg_g_ActivationTreshold_f32; // global float32 variable
+   - led_s_Instance_s; // singleton instance of type struct, for LED component
 
-Have two .h files for a driver:
+Each component has two .h files:
   - driver_i.h - contains all local stuff needed by the driver including configuration
   - driver_e.h - included by other SW which interacts with this driver. contains global/public definitions
   - driver.c - all implementation for driver
 
-All configuration should be stored as an array insinde driver_i.h file:
+Helpful note: all configuration should be stored as an array insinde driver_i.h file:
+```
 typedef struct {
   uint32 port;
   uint32 pin;
@@ -46,37 +71,5 @@ emg_chn_cfg emg_channels[2] = { // Array with exact values used for current HW t
   { 0xA, 14, 2f, 0.3f },
   { 0xB, 11, 3f, 0.4f }
 }
+```
 
-Global definition of driver/application return values (example, tailor to suit all needs):
-typedef enum {
-  DRIVER_OK,
-  DRIVER_ERROR,
-  DRIVER_HARDWARE_ERROR,
-  DRIVER_TIMEOUT,
-  DRIVER_INVALID_PARAMETER,
-  DRIVER_OUT_OF_MEMORY
-} DriverStatus;
-We should define our own bitfield type if none exist in STM32 dev environment.
-
-All drivers should implement following 'global' functions/vars:
-driver_f_Init_v();    // Init function, can take arguments, should return a success code (custom struct, DRIVER_OK, DRIVER_FAULT etc. with more fault types)
-driver_f_Handle_v();  // Handle function, everything happens here.
-driver_g_Control_b32; // 32bit bitfield where we can use bits however we want, to control/configure some things about the drivers: for example if motor drivers have feedback encoders, or if EMG should do additional filtering and what type of filtering
-
-The mandatory driver things should be encapsulated in a structure which will be defined in global level:
-typedef struct {
-  DriverStatus (*int)(void*);
-  DriverStatus (*handle)(void*);
-  uint32_t driver_g_Control_b32;
-} DriverInterface;
-All drivers should have some define (or something) that creates this DriverInterface struct for it, so in the master coordinator we can just use that to create array of all drivers we have.
-
-Main SW handler should make sure we have consistent 10ms cycle, and measure every init/handle function execution time and keep them in global memory for debugging (min, max, last execution time for each driver). 
-
-Folder structure: 
-Core:
- - Src - main.c
- - Inc - main.h, project defines, bitfield defines etc.
- - Drivers - low level drivers
- - Application - high level drivers
- - OS - master coordinator, handling drivers and application function calls, measuring, timekeeping etc.

@@ -1,0 +1,4 @@
+../Core/OS/os.c:32:17:os_f_GetManagerInstance_s	4	static
+../Core/OS/os.c:43:6:os_f_RegisterComponent_v	16	static
+../Core/OS/os.c:62:6:os_f_InitializeComponents_v	24	static
+../Core/OS/os.c:80:6:os_f_HandleComponents_v	24	static

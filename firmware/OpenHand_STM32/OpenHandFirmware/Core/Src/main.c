@@ -21,6 +21,16 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+/** @todo Add everything needed to start our 'OS' */
+
+/** Project specific includes */
+#include "defines.h"
+
+/** OS includes */
+#include "os_e.h"
+
+/** Component includes */
+#include "led_e.h"
 
 /* USER CODE END Includes */
 
@@ -101,7 +111,12 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
+  /** @todo Add everything needed to init our 'OS' */
+  /* Get OS singleton instance */
+  os_g_Manager_s* os = os_f_GetManagerInstance_s();
 
+  /* Register drivers with the OS */
+  os_f_RegisterComponent_v(os, led_f_GetInstance_s());
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -115,16 +130,20 @@ int main(void)
   MX_I2C1_Init();
   MX_UART4_Init();
   /* USER CODE BEGIN 2 */
-  //HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);  /* Motor 1 */
-  //HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);  /* Motor 2 */
-  //HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);  /* Motor 3 */
+  /* Initialize all registered drivers */
+  os_f_InitializeComponents_v(os);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  while (1)
+  {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+    /* Handle all registered drivers */
+    os_f_HandleComponents_v(os);
+  }
   /* USER CODE END 3 */
 }
 
