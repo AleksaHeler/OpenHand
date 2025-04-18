@@ -3,9 +3,9 @@
     "GenerationSoftware": {
       "Vendor": "KiCad",
       "Application": "Pcbnew",
-      "Version": "8.0.4"
+      "Version": "9.0.1"
     },
-    "CreationDate": "2025-01-31T12:32:01+01:00"
+    "CreationDate": "2025-04-18T15:24:00+02:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
@@ -49,12 +49,12 @@
     },
     {
       "Path": "OpenHand_v3-In1_Cu - Power.gbr",
-      "FileFunction": "Copper,L2,Inr",
+      "FileFunction": "Copper,L5,Inr",
       "FilePolarity": "Positive"
     },
     {
       "Path": "OpenHand_v3-In2_Cu - Ground.gbr",
-      "FileFunction": "Copper,L3,Inr",
+      "FileFunction": "Copper,L7,Inr",
       "FilePolarity": "Positive"
     },
     {

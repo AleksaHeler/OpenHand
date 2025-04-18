@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "5a0647c2-f475-44d3-a1e6-116b547f68f2")
 	(paper "A3")
 	(title_block
@@ -12,9 +12,13 @@
 	)
 	(lib_symbols
 		(symbol "Connector:TestPoint_Small"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.762) hide)
+				(offset 0.762)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -112,6 +116,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "DRV8833PWP_1"
 			(pin_names
@@ -215,24 +220,6 @@
 						)
 					)
 				)
-				(pin input line
-					(at -15.24 -10.16 0)
-					(length 5.08)
-					(name "BIN2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin bidirectional line
 					(at -15.24 7.62 0)
 					(length 5.08)
@@ -251,17 +238,17 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at 7.62 17.78 270)
+				(pin bidirectional line
+					(at -15.24 5.08 0)
 					(length 5.08)
-					(name "VM"
+					(name "AISEN"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "12"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -269,17 +256,17 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at 0 -17.78 90)
+				(pin bidirectional line
+					(at -15.24 2.54 0)
 					(length 5.08)
-					(name "GND"
+					(name "BISEN"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "13"
+					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -287,17 +274,17 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at 5.08 17.78 270)
+				(pin input line
+					(at -15.24 -2.54 0)
 					(length 5.08)
-					(name "VINT"
+					(name "AIN1"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "14"
+					(number "16"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -324,16 +311,52 @@
 					)
 				)
 				(pin input line
-					(at -15.24 -2.54 0)
+					(at -15.24 -7.62 0)
 					(length 5.08)
-					(name "AIN1"
+					(name "BIN1"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "16"
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -15.24 -10.16 0)
+					(length 5.08)
+					(name "BIN2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -17.78 90)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -343,7 +366,8 @@
 				)
 				(pin passive line
 					(at 0 -17.78 90)
-					(length 5.08) hide
+					(length 5.08)
+					(hide yes)
 					(name "GND"
 						(effects
 							(font
@@ -352,6 +376,60 @@
 						)
 					)
 					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 5.08 17.78 270)
+					(length 5.08)
+					(name "VINT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 7.62 17.78 270)
+					(length 5.08)
+					(name "VM"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin open_collector line
+					(at 15.24 2.54 180)
+					(length 5.08)
+					(name "~{FAULT}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -370,24 +448,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -15.24 5.08 0)
-					(length 5.08)
-					(name "AISEN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -414,42 +474,6 @@
 					)
 				)
 				(pin power_out line
-					(at 15.24 -10.16 180)
-					(length 5.08)
-					(name "BOUT2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -15.24 2.54 0)
-					(length 5.08)
-					(name "BISEN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_out line
 					(at 15.24 -7.62 180)
 					(length 5.08)
 					(name "BOUT1"
@@ -467,35 +491,17 @@
 						)
 					)
 				)
-				(pin open_collector line
-					(at 15.24 2.54 180)
+				(pin power_out line
+					(at 15.24 -10.16 180)
 					(length 5.08)
-					(name "~{FAULT}"
+					(name "BOUT2"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -15.24 -7.62 0)
-					(length 5.08)
-					(name "BIN1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -504,9 +510,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:C"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.254)
 			)
@@ -579,7 +588,7 @@
 			(symbol "C_0_1"
 				(polyline
 					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
+						(xy -2.032 0.762) (xy 2.032 0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -591,7 +600,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -640,9 +649,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -761,11 +773,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Jumper:SolderJumper_2_Bridged"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim yes)
 			(in_bom no)
 			(on_board yes)
@@ -842,30 +859,6 @@
 						(type outline)
 					)
 				)
-				(arc
-					(start -0.254 1.016)
-					(mid -1.2656 0)
-					(end -0.254 -1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -0.254 1.016)
-					(mid -1.2656 0)
-					(end -0.254 -1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
 				(polyline
 					(pts
 						(xy -0.254 1.016) (xy -0.254 -1.016)
@@ -878,6 +871,54 @@
 						(type none)
 					)
 				)
+				(arc
+					(start -0.254 -1.016)
+					(mid -1.2656 0)
+					(end -0.254 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -0.254 -1.016)
+					(mid -1.2656 0)
+					(end -0.254 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(arc
+					(start 0.254 1.016)
+					(mid 1.2656 0)
+					(end 0.254 -1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0.254 1.016)
+					(mid 1.2656 0)
+					(end 0.254 -1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
 				(polyline
 					(pts
 						(xy 0.254 1.016) (xy 0.254 -1.016)
@@ -888,30 +929,6 @@
 					)
 					(fill
 						(type none)
-					)
-				)
-				(arc
-					(start 0.254 -1.016)
-					(mid 1.2656 0)
-					(end 0.254 1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0.254 -1.016)
-					(mid 1.2656 0)
-					(end 0.254 1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
 					)
 				)
 			)
@@ -953,12 +970,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+5V"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1030,7 +1052,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -1042,7 +1064,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -1073,12 +1095,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1169,7 +1196,219 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(rectangle
+		(start 17.78 97.79)
+		(end 144.78 163.83)
+		(stroke
+			(width 0)
+			(type dash_dot)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 163bcd5b-ae3b-4504-8144-13daaa58e319)
+	)
+	(rectangle
+		(start 17.78 17.78)
+		(end 144.78 91.44)
+		(stroke
+			(width 0)
+			(type dash_dot)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 208c58e5-a531-4d3b-bd26-7d6c0c5e84c8)
+	)
+	(rectangle
+		(start 152.4 97.79)
+		(end 279.4 163.83)
+		(stroke
+			(width 0)
+			(type dash_dot)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 3a6cdee5-3400-48cd-971a-5b3c71236bb7)
+	)
+	(rectangle
+		(start 152.4 17.78)
+		(end 279.4 91.44)
+		(stroke
+			(width 0)
+			(type dash_dot)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 4b090c3e-1bb7-42f1-8631-3dc99243c058)
+	)
+	(text "Cutoff current 1A\nRSENSE = 0.2 V / 0.5 A = 0.4 Ω"
+		(exclude_from_sim no)
+		(at 154.94 85.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "114cbf6a-8612-4954-84e4-5064200363b1")
+	)
+	(text "MOTOR CONTROLLER #1"
+		(exclude_from_sim no)
+		(at 20.32 25.4 0)
+		(effects
+			(font
+				(size 3 3)
+				(thickness 0.6)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "20f149e7-565b-49cb-80fc-6677d8e14caf")
+	)
+	(text "DRV8833PWPR PWM motor driver"
+		(exclude_from_sim no)
+		(at 154.94 161.29 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left bottom)
+			(href "https://www.lcsc.com/product-detail/Motor-Driver-ICs_Texas-Instruments-DRV8833PWPR_C50506.html")
+		)
+		(uuid "534db5e9-c981-41a8-92fe-1764ed749258")
+	)
+	(text "DRV8833PWPR PWM motor driver"
+		(exclude_from_sim no)
+		(at 20.32 161.29 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left bottom)
+			(href "https://www.lcsc.com/product-detail/Motor-Driver-ICs_Texas-Instruments-DRV8833PWPR_C50506.html")
+		)
+		(uuid "5c27911d-e04d-49bf-b2d4-a080aa4c0096")
+	)
+	(text "HAPTIC FEEDBACK MOTOR CONTROLLER"
+		(exclude_from_sim no)
+		(at 154.686 105.664 0)
+		(effects
+			(font
+				(size 3 3)
+				(thickness 0.6)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "66a91ca4-b1f2-4fe7-a306-679ab02b5642")
+	)
+	(text "Using PWM and GPIO signals on pins xIN1 and xIN2, we can control the speed (current) and direction of connected DC motors. Looking at the datasheet, \nwe can use xIN2 as PWM for speed, and xIN1 as direction input (HIGH for forward, LOW for reverse). PWM frequency should be 50kHz.\n\nWhen the voltage on pin xISEN exceeds VTRIP (0.2 V), current regulation is activated. The RISENSE resistor should be sized to set the current cutoff level:\nRISENSE = 0.2 V / ICHOP -> To set ICHOP to 1 A, RSENSE = 0.2 V / 1 A = 0.2 Ω (finger linear actuator motors)\nTo set ICHOP to ~42.5mA, RSENSE = 0.2 V / 0.0425 A = ~4.7 Ω (haptic feedback motors)\n\nUsing nSLEEP pin (EN) we can turn the specific IC off (by setting the pin to LOW) for lower power consumption, or just to turn the motors off. If pin is HIGH, \nthe device operates normally. When returning from sleep mode, some time (up to 1 ms) needs to pass before the motor driver becomes fully operational. Device \nalso features internal over-temperature protection (at ~160 °C), it will auto shut off, nFAULT pin will be driven LOW, and once the temperature falls operation \nresumes and nFAULT pin will be HIGH. Same behaviour in case of over-current detection over RISENSE resistors.\n\nOn ICs for main finger motor control, we double up the channels (connect them in parallel) for double the current (and power) for that given motor. We do this \nto give us room for thermal design and possibly more powerful motors in future."
+		(exclude_from_sim no)
+		(at 17.78 195.58 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "71127535-3c18-49fe-9eff-edc3743568a7")
+	)
+	(text "MOTOR CONTROLLER #3"
+		(exclude_from_sim no)
+		(at 20.32 105.156 0)
+		(effects
+			(font
+				(size 3 3)
+				(thickness 0.6)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "73b04d2d-a85a-4ffb-8c6a-5082d1d682b2")
+	)
+	(text "MOTOR CONTROLLER #2"
+		(exclude_from_sim no)
+		(at 154.94 25.4 0)
+		(effects
+			(font
+				(size 3 3)
+				(thickness 0.6)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "9356df1a-1761-42de-b383-d4be0cecfb24")
+	)
+	(text "DRV8833PWPR PWM motor driver"
+		(exclude_from_sim no)
+		(at 20.32 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left bottom)
+			(href "https://www.lcsc.com/product-detail/Motor-Driver-ICs_Texas-Instruments-DRV8833PWPR_C50506.html")
+		)
+		(uuid "969a4989-d392-4a6d-b397-4b5edce208e1")
+	)
+	(text "Cutoff current 1A\nRSENSE = 0.2 V / 0.5 A = 0.4 Ω"
+		(exclude_from_sim no)
+		(at 20.32 85.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9cb171e8-05e8-4809-822e-ad8adcb51a8f")
+	)
+	(text "Cutoff current ~42.5mA\nRSENSE = 0.2 V / 0.0425 A = ~4.7 Ω"
+		(exclude_from_sim no)
+		(at 154.94 158.75 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a2ccdb0c-6c8f-4d64-bb77-afc89cdf325d")
+	)
+	(text "DRV8833PWPR PWM motor driver"
+		(exclude_from_sim no)
+		(at 154.94 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left bottom)
+			(href "https://www.lcsc.com/product-detail/Motor-Driver-ICs_Texas-Instruments-DRV8833PWPR_C50506.html")
+		)
+		(uuid "c31e290f-07d9-439d-8e0a-410a6e40b78e")
+	)
+	(text "Cutoff current 1A\nRSENSE = 0.2 V / 0.5 A = 0.4 Ω\n"
+		(exclude_from_sim no)
+		(at 20.32 157.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e047ed2c-40df-4c53-8b25-6ebc883c0b78")
 	)
 	(junction
 		(at 74.93 138.43)
@@ -3148,217 +3387,6 @@
 			(type default)
 		)
 		(uuid "fcaef552-1cd0-4c2b-abb4-d0f7396402b1")
-	)
-	(rectangle
-		(start 17.78 97.79)
-		(end 144.78 163.83)
-		(stroke
-			(width 0)
-			(type dash_dot)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 163bcd5b-ae3b-4504-8144-13daaa58e319)
-	)
-	(rectangle
-		(start 17.78 17.78)
-		(end 144.78 91.44)
-		(stroke
-			(width 0)
-			(type dash_dot)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 208c58e5-a531-4d3b-bd26-7d6c0c5e84c8)
-	)
-	(rectangle
-		(start 152.4 97.79)
-		(end 279.4 163.83)
-		(stroke
-			(width 0)
-			(type dash_dot)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 3a6cdee5-3400-48cd-971a-5b3c71236bb7)
-	)
-	(rectangle
-		(start 152.4 17.78)
-		(end 279.4 91.44)
-		(stroke
-			(width 0)
-			(type dash_dot)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 4b090c3e-1bb7-42f1-8631-3dc99243c058)
-	)
-	(text "Cutoff current 1A\nRSENSE = 0.2 V / 0.5 A = 0.4 Ω"
-		(exclude_from_sim no)
-		(at 154.94 85.09 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "114cbf6a-8612-4954-84e4-5064200363b1")
-	)
-	(text "MOTOR CONTROLLER #1"
-		(exclude_from_sim no)
-		(at 20.32 25.4 0)
-		(effects
-			(font
-				(size 3 3)
-				(thickness 0.6)
-				(bold yes)
-			)
-			(justify left bottom)
-		)
-		(uuid "20f149e7-565b-49cb-80fc-6677d8e14caf")
-	)
-	(text "DRV8833PWPR PWM motor driver"
-		(exclude_from_sim no)
-		(at 154.94 161.29 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.254)
-				(bold yes)
-			)
-			(justify left bottom)
-			(href "https://www.lcsc.com/product-detail/Motor-Driver-ICs_Texas-Instruments-DRV8833PWPR_C50506.html")
-		)
-		(uuid "534db5e9-c981-41a8-92fe-1764ed749258")
-	)
-	(text "DRV8833PWPR PWM motor driver"
-		(exclude_from_sim no)
-		(at 20.32 161.29 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.254)
-				(bold yes)
-			)
-			(justify left bottom)
-			(href "https://www.lcsc.com/product-detail/Motor-Driver-ICs_Texas-Instruments-DRV8833PWPR_C50506.html")
-		)
-		(uuid "5c27911d-e04d-49bf-b2d4-a080aa4c0096")
-	)
-	(text "HAPTIC FEEDBACK MOTOR CONTROLLER"
-		(exclude_from_sim no)
-		(at 154.686 105.664 0)
-		(effects
-			(font
-				(size 3 3)
-				(thickness 0.6)
-				(bold yes)
-			)
-			(justify left bottom)
-		)
-		(uuid "66a91ca4-b1f2-4fe7-a306-679ab02b5642")
-	)
-	(text "Using PWM and GPIO signals on pins xIN1 and xIN2, we can control the speed (current) and direction of connected DC motors. Looking at the datasheet, \nwe can use xIN2 as PWM for speed, and xIN1 as direction input (HIGH for forward, LOW for reverse). PWM frequency should be 50kHz.\n\nWhen the voltage on pin xISEN exceeds VTRIP (0.2 V), current regulation is activated. The RISENSE resistor should be sized to set the current cutoff level:\nRISENSE = 0.2 V / ICHOP -> To set ICHOP to 1 A, RSENSE = 0.2 V / 1 A = 0.2 Ω (finger linear actuator motors)\nTo set ICHOP to ~42.5mA, RSENSE = 0.2 V / 0.0425 A = ~4.7 Ω (haptic feedback motors)\n\nUsing nSLEEP pin (EN) we can turn the specific IC off (by setting the pin to LOW) for lower power consumption, or just to turn the motors off. If pin is HIGH, \nthe device operates normally. When returning from sleep mode, some time (up to 1 ms) needs to pass before the motor driver becomes fully operational. Device \nalso features internal over-temperature protection (at ~160 °C), it will auto shut off, nFAULT pin will be driven LOW, and once the temperature falls operation \nresumes and nFAULT pin will be HIGH. Same behaviour in case of over-current detection over RISENSE resistors.\n\nOn ICs for main finger motor control, we double up the channels (connect them in parallel) for double the current (and power) for that given motor. We do this \nto give us room for thermal design and possibly more powerful motors in future."
-		(exclude_from_sim no)
-		(at 17.78 195.58 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "71127535-3c18-49fe-9eff-edc3743568a7")
-	)
-	(text "MOTOR CONTROLLER #3"
-		(exclude_from_sim no)
-		(at 20.32 105.156 0)
-		(effects
-			(font
-				(size 3 3)
-				(thickness 0.6)
-				(bold yes)
-			)
-			(justify left bottom)
-		)
-		(uuid "73b04d2d-a85a-4ffb-8c6a-5082d1d682b2")
-	)
-	(text "MOTOR CONTROLLER #2"
-		(exclude_from_sim no)
-		(at 154.94 25.4 0)
-		(effects
-			(font
-				(size 3 3)
-				(thickness 0.6)
-				(bold yes)
-			)
-			(justify left bottom)
-		)
-		(uuid "9356df1a-1761-42de-b383-d4be0cecfb24")
-	)
-	(text "DRV8833PWPR PWM motor driver"
-		(exclude_from_sim no)
-		(at 20.32 88.9 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.254)
-				(bold yes)
-			)
-			(justify left bottom)
-			(href "https://www.lcsc.com/product-detail/Motor-Driver-ICs_Texas-Instruments-DRV8833PWPR_C50506.html")
-		)
-		(uuid "969a4989-d392-4a6d-b397-4b5edce208e1")
-	)
-	(text "Cutoff current 1A\nRSENSE = 0.2 V / 0.5 A = 0.4 Ω"
-		(exclude_from_sim no)
-		(at 20.32 85.09 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "9cb171e8-05e8-4809-822e-ad8adcb51a8f")
-	)
-	(text "Cutoff current ~42.5mA\nRSENSE = 0.2 V / 0.0425 A = ~4.7 Ω"
-		(exclude_from_sim no)
-		(at 154.94 158.75 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a2ccdb0c-6c8f-4d64-bb77-afc89cdf325d")
-	)
-	(text "DRV8833PWPR PWM motor driver"
-		(exclude_from_sim no)
-		(at 154.94 88.9 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.254)
-				(bold yes)
-			)
-			(justify left bottom)
-			(href "https://www.lcsc.com/product-detail/Motor-Driver-ICs_Texas-Instruments-DRV8833PWPR_C50506.html")
-		)
-		(uuid "c31e290f-07d9-439d-8e0a-410a6e40b78e")
-	)
-	(text "Cutoff current 1A\nRSENSE = 0.2 V / 0.5 A = 0.4 Ω\n"
-		(exclude_from_sim no)
-		(at 20.32 157.48 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "e047ed2c-40df-4c53-8b25-6ebc883c0b78")
 	)
 	(global_label "MOTOR_01_DIR"
 		(shape input)

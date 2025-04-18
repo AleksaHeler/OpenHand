@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "449d0905-67e9-4087-9948-34e7f2f7a608")
 	(paper "A3")
 	(title_block
@@ -102,17 +102,17 @@
 						(type background)
 					)
 				)
-				(pin output line
-					(at 7.62 0 180)
+				(pin input line
+					(at -7.62 2.54 0)
 					(length 2.54)
-					(name "~"
+					(name "+"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "1"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -138,17 +138,17 @@
 						)
 					)
 				)
-				(pin input line
-					(at -7.62 2.54 0)
+				(pin output line
+					(at 7.62 0 180)
 					(length 2.54)
-					(name "+"
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "3"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -256,24 +256,6 @@
 						)
 					)
 				)
-				(pin output line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin input line
 					(at -7.62 -2.54 0)
 					(length 2.54)
@@ -285,6 +267,24 @@
 						)
 					)
 					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -363,24 +363,6 @@
 			)
 			(symbol "LM324_5_1"
 				(pin power_in line
-					(at -2.54 -7.62 90)
-					(length 3.81)
-					(name "V-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
 					(at -2.54 7.62 270)
 					(length 3.81)
 					(name "V+"
@@ -398,12 +380,35 @@
 						)
 					)
 				)
+				(pin power_in line
+					(at -2.54 -7.62 90)
+					(length 3.81)
+					(name "V-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Connector:TestPoint_Small"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0.762) hide)
+				(offset 0.762)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -501,9 +506,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:C"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.254)
 			)
@@ -576,7 +584,7 @@
 			(symbol "C_0_1"
 				(polyline
 					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
+						(xy -2.032 0.762) (xy 2.032 0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -588,7 +596,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -637,11 +645,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:D_Schottky"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -709,10 +722,10 @@
 			(symbol "D_Schottky_0_1"
 				(polyline
 					(pts
-						(xy 1.27 0) (xy -1.27 0)
+						(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
 					)
 					(stroke
-						(width 0)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -733,10 +746,10 @@
 				)
 				(polyline
 					(pts
-						(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
+						(xy 1.27 0) (xy -1.27 0)
 					)
 					(stroke
-						(width 0.254)
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -782,9 +795,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -903,10 +919,13 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R_Potentiometer"
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -972,12 +991,11 @@
 				)
 			)
 			(symbol "R_Potentiometer_0_1"
-				(polyline
-					(pts
-						(xy 2.54 0) (xy 1.524 0)
-					)
+				(rectangle
+					(start 1.016 2.54)
+					(end -1.016 -2.54)
 					(stroke
-						(width 0)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -996,11 +1014,12 @@
 						(type outline)
 					)
 				)
-				(rectangle
-					(start 1.016 2.54)
-					(end -1.016 -2.54)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 1.524 0)
+					)
 					(stroke
-						(width 0.254)
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -1028,24 +1047,6 @@
 					)
 				)
 				(pin passive line
-					(at 3.81 0 180)
-					(length 1.27)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
 					(at 0 -3.81 90)
 					(length 1.27)
 					(name "3"
@@ -1063,10 +1064,31 @@
 						)
 					)
 				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 1.27)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:Thermistor_NTC"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -1136,21 +1158,9 @@
 			)
 			(symbol "Thermistor_NTC_0_1"
 				(arc
-					(start -3.048 2.159)
-					(mid -3.0495 2.3143)
-					(end -3.175 2.413)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -3.048 2.159)
-					(mid -2.9736 1.9794)
-					(end -2.794 1.905)
+					(start -3.175 2.413)
+					(mid -3.0506 2.3165)
+					(end -3.048 2.159)
 					(stroke
 						(width 0)
 						(type default)
@@ -1161,32 +1171,8 @@
 				)
 				(arc
 					(start -3.048 2.794)
-					(mid -2.9736 2.6144)
-					(end -2.794 2.54)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -2.794 1.905)
-					(mid -2.6144 1.9794)
-					(end -2.54 2.159)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -2.794 2.54)
-					(mid -2.4393 2.5587)
-					(end -2.159 2.794)
+					(mid -2.9736 2.9736)
+					(end -2.794 3.048)
 					(stroke
 						(width 0)
 						(type default)
@@ -1197,7 +1183,19 @@
 				)
 				(arc
 					(start -2.794 3.048)
-					(mid -2.9736 2.9736)
+					(mid -2.6144 2.9736)
+					(end -2.54 2.794)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -2.794 2.54)
+					(mid -2.9736 2.6144)
 					(end -3.048 2.794)
 					(stroke
 						(width 0)
@@ -1208,9 +1206,9 @@
 					)
 				)
 				(arc
-					(start -2.54 2.794)
-					(mid -2.6144 2.9736)
-					(end -2.794 3.048)
+					(start -2.794 1.905)
+					(mid -2.9736 1.9794)
+					(end -3.048 2.159)
 					(stroke
 						(width 0)
 						(type default)
@@ -1219,11 +1217,24 @@
 						(type none)
 					)
 				)
-				(rectangle
-					(start -1.016 2.54)
-					(end 1.016 -2.54)
+				(arc
+					(start -2.54 2.159)
+					(mid -2.6144 1.9794)
+					(end -2.794 1.905)
 					(stroke
-						(width 0.254)
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -2.159 2.794)
+					(mid -2.434 2.5608)
+					(end -2.794 2.54)
+					(stroke
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -1233,18 +1244,6 @@
 				(polyline
 					(pts
 						(xy -2.54 2.159) (xy -2.54 2.794)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.778 2.54) (xy -1.778 1.524) (xy 1.778 -1.524) (xy 1.778 -2.54)
 					)
 					(stroke
 						(width 0)
@@ -1268,6 +1267,18 @@
 				)
 				(polyline
 					(pts
+						(xy -1.778 2.54) (xy -1.778 1.524) (xy 1.778 -1.524) (xy 1.778 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
 						(xy -1.778 -1.397) (xy -1.778 -3.683) (xy -2.032 -2.921) (xy -1.524 -2.921) (xy -1.778 -3.683)
 						(xy -1.778 -3.429)
 					)
@@ -1277,6 +1288,17 @@
 					)
 					(fill
 						(type outline)
+					)
+				)
+				(rectangle
+					(start -1.016 2.54)
+					(end 1.016 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
 			)
@@ -1318,6 +1340,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+3V3"
 			(power)
@@ -1395,7 +1418,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -1407,7 +1430,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -1421,7 +1444,8 @@
 			(symbol "+3V3_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "+3V3"
 						(effects
 							(font
@@ -1438,12 +1462,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+5V"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1515,7 +1544,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -1527,7 +1556,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -1558,6 +1587,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:-5V"
 			(power)
@@ -1623,7 +1653,8 @@
 			(symbol "-5V_0_0"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
+					(length 0)
+					(hide yes)
 					(name "-5V"
 						(effects
 							(font
@@ -1654,12 +1685,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1750,7 +1786,332 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(rectangle
+		(start 179.07 143.51)
+		(end 279.4 161.29)
+		(stroke
+			(width 0)
+			(type dash_dot)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 21e54850-5be5-436a-b952-6a122ae3f84b)
+	)
+	(rectangle
+		(start 17.78 143.51)
+		(end 173.99 193.04)
+		(stroke
+			(width 0)
+			(type dash_dot)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 290a7c9c-8cb0-4ade-920e-f1aa8874d25c)
+	)
+	(rectangle
+		(start 152.4 17.78)
+		(end 279.4 138.43)
+		(stroke
+			(width 0)
+			(type dash_dot)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 2c8c8a1a-384b-41ab-b105-cbe1cbb8d121)
+	)
+	(rectangle
+		(start 120.015 17.78)
+		(end 144.78 48.895)
+		(stroke
+			(width 0)
+			(type dash_dot)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 8883509f-ae7c-4bab-a3f1-bb3fa07bf872)
+	)
+	(rectangle
+		(start 254.635 17.78)
+		(end 279.4 48.895)
+		(stroke
+			(width 0)
+			(type dash_dot)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 9ca5cac2-01bf-47ab-9de7-f058d9a94eed)
+	)
+	(rectangle
+		(start 17.78 17.78)
+		(end 144.78 138.43)
+		(stroke
+			(width 0)
+			(type dash_dot)
+		)
+		(fill
+			(type none)
+		)
+		(uuid b05860da-268d-410e-9610-28b5e4d646b5)
+	)
+	(text "EMG SENSOR"
+		(exclude_from_sim no)
+		(at 20.32 25.4 0)
+		(effects
+			(font
+				(size 3 3)
+				(thickness 0.6)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "05401164-602c-4da1-9de7-7f36c237cda1")
+	)
+	(text "MOTOR ENCODERS VOLTAGE DIVIDERS"
+		(exclude_from_sim no)
+		(at 20.574 150.876 0)
+		(effects
+			(font
+				(size 3 3)
+				(thickness 0.6)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "198521ac-3c17-47b0-a537-3a4500473e24")
+	)
+	(text "EMG SENSOR"
+		(exclude_from_sim no)
+		(at 154.94 25.4 0)
+		(effects
+			(font
+				(size 3 3)
+				(thickness 0.6)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "1e0ff40b-4d34-4194-b993-e7d539f61bcf")
+	)
+	(text "Low-pass filter"
+		(exclude_from_sim no)
+		(at 191.77 87.63 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "317cec8a-b7fe-4e92-a6ba-9acb46ad98ab")
+	)
+	(text "CALCULATOR"
+		(exclude_from_sim no)
+		(at 107.188 72.644 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(italic yes)
+			)
+			(href "https://www.jotrin.com/tool/details/YFGTLBQJSQ")
+		)
+		(uuid "40f3ac52-cc4a-4e02-b718-47b86c9cdc05")
+	)
+	(text "PCB TEMP SENSORS"
+		(exclude_from_sim no)
+		(at 180.594 149.606 0)
+		(effects
+			(font
+				(size 3 3)
+				(thickness 0.6)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "49c41f6e-ba51-439e-a32c-fda97dbee464")
+	)
+	(text "CALCULATOR"
+		(exclude_from_sim no)
+		(at 60.452 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(italic yes)
+			)
+			(href "https://onechip.com/differential-amplifier-using-op-amp-calculator.html")
+		)
+		(uuid "6c32ef0f-9401-44a0-a24b-c0f6013372b9")
+	)
+	(text "Differential amplifier"
+		(exclude_from_sim no)
+		(at 186.69 44.45 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "6dcc97ee-3820-4b9c-8394-c8412d408c7e")
+	)
+	(text "(OpenEMG project by charleslabs.fr)"
+		(exclude_from_sim no)
+		(at 19.05 135.89 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+			(href "https://www.charleslabs.fr/en/project-OpenEMG+Arduino+Sensor")
+		)
+		(uuid "70a86ba2-470e-42a1-ba86-f996f8308871")
+	)
+	(text "CALCULATOR"
+		(exclude_from_sim no)
+		(at 203.962 120.65 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(italic yes)
+			)
+			(href "https://www.jotrin.com/tool/details/YSFDQDTLBQJSQ")
+		)
+		(uuid "7289aafa-6896-412a-b644-e17b3ebb8be3")
+	)
+	(text "CALCULATOR"
+		(exclude_from_sim no)
+		(at 241.046 73.914 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(italic yes)
+			)
+			(href "https://www.jotrin.com/tool/details/YFGTLBQJSQ")
+		)
+		(uuid "79250b2a-6e93-42a3-8396-cd6cb00852a0")
+	)
+	(text "High-pass filter"
+		(exclude_from_sim no)
+		(at 231.14 40.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "8496ddda-807a-469b-a883-b7635cc14b53")
+	)
+	(text "Tunable amplifier"
+		(exclude_from_sim no)
+		(at 226.06 97.79 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "a3ef9582-2f0e-4dcd-9e18-14b37cb36696")
+	)
+	(text "High-pass filter"
+		(exclude_from_sim no)
+		(at 96.52 38.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "b0c25494-98fc-40cb-aba1-4a6e996e4bc0")
+	)
+	(text "(OpenEMG project by charleslabs.fr)"
+		(exclude_from_sim no)
+		(at 153.67 135.89 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+			(href "https://www.charleslabs.fr/en/project-OpenEMG+Arduino+Sensor")
+		)
+		(uuid "cb0f7813-48c0-460b-a2d9-e62ef4d84769")
+	)
+	(text "Differential amplifier"
+		(exclude_from_sim no)
+		(at 52.07 41.91 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "e8769f02-8d86-49c5-91a2-a9982df05675")
+	)
+	(text "CALCULATOR"
+		(exclude_from_sim no)
+		(at 194.818 72.136 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(italic yes)
+			)
+			(href "https://onechip.com/differential-amplifier-using-op-amp-calculator.html")
+		)
+		(uuid "ec62c9ca-c570-4d40-bd42-151a043004a0")
+	)
+	(text "Low-pass filter"
+		(exclude_from_sim no)
+		(at 57.15 87.63 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "f1903d52-dafe-442c-83b6-4a884ef633a4")
+	)
+	(text "CALCULATOR"
+		(exclude_from_sim no)
+		(at 68.326 121.158 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(italic yes)
+			)
+			(href "https://www.jotrin.com/tool/details/YSFDQDTLBQJSQ")
+		)
+		(uuid "f34d8fc1-84ba-45ba-8074-e17f6232aa6d")
+	)
+	(text "Tunable amplifier"
+		(exclude_from_sim no)
+		(at 91.44 97.79 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "f420c402-b58a-4c0e-9027-4b2de62dcf0b")
 	)
 	(junction
 		(at 227.33 80.01)
@@ -4273,330 +4634,6 @@
 			(type default)
 		)
 		(uuid "ff2f38c0-3622-4ade-9f99-89089c690b76")
-	)
-	(rectangle
-		(start 179.07 143.51)
-		(end 279.4 161.29)
-		(stroke
-			(width 0)
-			(type dash_dot)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 21e54850-5be5-436a-b952-6a122ae3f84b)
-	)
-	(rectangle
-		(start 17.78 143.51)
-		(end 173.99 193.04)
-		(stroke
-			(width 0)
-			(type dash_dot)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 290a7c9c-8cb0-4ade-920e-f1aa8874d25c)
-	)
-	(rectangle
-		(start 152.4 17.78)
-		(end 279.4 138.43)
-		(stroke
-			(width 0)
-			(type dash_dot)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 2c8c8a1a-384b-41ab-b105-cbe1cbb8d121)
-	)
-	(rectangle
-		(start 120.015 17.78)
-		(end 144.78 48.895)
-		(stroke
-			(width 0)
-			(type dash_dot)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 8883509f-ae7c-4bab-a3f1-bb3fa07bf872)
-	)
-	(rectangle
-		(start 254.635 17.78)
-		(end 279.4 48.895)
-		(stroke
-			(width 0)
-			(type dash_dot)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 9ca5cac2-01bf-47ab-9de7-f058d9a94eed)
-	)
-	(rectangle
-		(start 17.78 17.78)
-		(end 144.78 138.43)
-		(stroke
-			(width 0)
-			(type dash_dot)
-		)
-		(fill
-			(type none)
-		)
-		(uuid b05860da-268d-410e-9610-28b5e4d646b5)
-	)
-	(text "EMG SENSOR"
-		(exclude_from_sim no)
-		(at 20.32 25.4 0)
-		(effects
-			(font
-				(size 3 3)
-				(thickness 0.6)
-				(bold yes)
-			)
-			(justify left bottom)
-		)
-		(uuid "05401164-602c-4da1-9de7-7f36c237cda1")
-	)
-	(text "MOTOR ENCODERS VOLTAGE DIVIDERS"
-		(exclude_from_sim no)
-		(at 20.574 150.876 0)
-		(effects
-			(font
-				(size 3 3)
-				(thickness 0.6)
-				(bold yes)
-			)
-			(justify left bottom)
-		)
-		(uuid "198521ac-3c17-47b0-a537-3a4500473e24")
-	)
-	(text "EMG SENSOR"
-		(exclude_from_sim no)
-		(at 154.94 25.4 0)
-		(effects
-			(font
-				(size 3 3)
-				(thickness 0.6)
-				(bold yes)
-			)
-			(justify left bottom)
-		)
-		(uuid "1e0ff40b-4d34-4194-b993-e7d539f61bcf")
-	)
-	(text "Low-pass filter"
-		(exclude_from_sim no)
-		(at 191.77 87.63 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.254)
-				(bold yes)
-			)
-			(justify left bottom)
-		)
-		(uuid "317cec8a-b7fe-4e92-a6ba-9acb46ad98ab")
-	)
-	(text "CALCULATOR"
-		(exclude_from_sim no)
-		(at 107.188 72.644 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(italic yes)
-			)
-			(href "https://www.jotrin.com/tool/details/YFGTLBQJSQ")
-		)
-		(uuid "40f3ac52-cc4a-4e02-b718-47b86c9cdc05")
-	)
-	(text "PCB TEMP SENSORS"
-		(exclude_from_sim no)
-		(at 180.594 149.606 0)
-		(effects
-			(font
-				(size 3 3)
-				(thickness 0.6)
-				(bold yes)
-			)
-			(justify left bottom)
-		)
-		(uuid "49c41f6e-ba51-439e-a32c-fda97dbee464")
-	)
-	(text "CALCULATOR"
-		(exclude_from_sim no)
-		(at 60.452 71.12 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(italic yes)
-			)
-			(href "https://onechip.com/differential-amplifier-using-op-amp-calculator.html")
-		)
-		(uuid "6c32ef0f-9401-44a0-a24b-c0f6013372b9")
-	)
-	(text "Differential amplifier"
-		(exclude_from_sim no)
-		(at 186.69 44.45 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.254)
-				(bold yes)
-			)
-			(justify left bottom)
-		)
-		(uuid "6dcc97ee-3820-4b9c-8394-c8412d408c7e")
-	)
-	(text "(OpenEMG project by charleslabs.fr)"
-		(exclude_from_sim no)
-		(at 19.05 135.89 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-			(href "https://www.charleslabs.fr/en/project-OpenEMG+Arduino+Sensor")
-		)
-		(uuid "70a86ba2-470e-42a1-ba86-f996f8308871")
-	)
-	(text "CALCULATOR"
-		(exclude_from_sim no)
-		(at 203.962 120.65 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(italic yes)
-			)
-			(href "https://www.jotrin.com/tool/details/YSFDQDTLBQJSQ")
-		)
-		(uuid "7289aafa-6896-412a-b644-e17b3ebb8be3")
-	)
-	(text "CALCULATOR"
-		(exclude_from_sim no)
-		(at 241.046 73.914 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(italic yes)
-			)
-			(href "https://www.jotrin.com/tool/details/YFGTLBQJSQ")
-		)
-		(uuid "79250b2a-6e93-42a3-8396-cd6cb00852a0")
-	)
-	(text "High-pass filter"
-		(exclude_from_sim no)
-		(at 231.14 40.64 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.254)
-				(bold yes)
-			)
-			(justify left bottom)
-		)
-		(uuid "8496ddda-807a-469b-a883-b7635cc14b53")
-	)
-	(text "Tunable amplifier"
-		(exclude_from_sim no)
-		(at 226.06 97.79 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.254)
-				(bold yes)
-			)
-			(justify left bottom)
-		)
-		(uuid "a3ef9582-2f0e-4dcd-9e18-14b37cb36696")
-	)
-	(text "High-pass filter"
-		(exclude_from_sim no)
-		(at 96.52 38.1 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.254)
-				(bold yes)
-			)
-			(justify left bottom)
-		)
-		(uuid "b0c25494-98fc-40cb-aba1-4a6e996e4bc0")
-	)
-	(text "(OpenEMG project by charleslabs.fr)"
-		(exclude_from_sim no)
-		(at 153.67 135.89 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-			(href "https://www.charleslabs.fr/en/project-OpenEMG+Arduino+Sensor")
-		)
-		(uuid "cb0f7813-48c0-460b-a2d9-e62ef4d84769")
-	)
-	(text "Differential amplifier"
-		(exclude_from_sim no)
-		(at 52.07 41.91 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.254)
-				(bold yes)
-			)
-			(justify left bottom)
-		)
-		(uuid "e8769f02-8d86-49c5-91a2-a9982df05675")
-	)
-	(text "CALCULATOR"
-		(exclude_from_sim no)
-		(at 194.818 72.136 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(italic yes)
-			)
-			(href "https://onechip.com/differential-amplifier-using-op-amp-calculator.html")
-		)
-		(uuid "ec62c9ca-c570-4d40-bd42-151a043004a0")
-	)
-	(text "Low-pass filter"
-		(exclude_from_sim no)
-		(at 57.15 87.63 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.254)
-				(bold yes)
-			)
-			(justify left bottom)
-		)
-		(uuid "f1903d52-dafe-442c-83b6-4a884ef633a4")
-	)
-	(text "CALCULATOR"
-		(exclude_from_sim no)
-		(at 68.326 121.158 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(italic yes)
-			)
-			(href "https://www.jotrin.com/tool/details/YSFDQDTLBQJSQ")
-		)
-		(uuid "f34d8fc1-84ba-45ba-8074-e17f6232aa6d")
-	)
-	(text "Tunable amplifier"
-		(exclude_from_sim no)
-		(at 91.44 97.79 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.254)
-				(bold yes)
-			)
-			(justify left bottom)
-		)
-		(uuid "f420c402-b58a-4c0e-9027-4b2de62dcf0b")
 	)
 	(global_label "EMG_1_MIDPOINT"
 		(shape output)
